@@ -4,7 +4,7 @@
 * When query-string and named-segments have same variables (or keys) then the named-segments values are injected into action args.
 ```
 @HttpGet('/query/:name')
-query(name: string, search: string): string {
+query(name: string, @QueryParam() search: string): string {
     return 'Hello World!';
 }
 
